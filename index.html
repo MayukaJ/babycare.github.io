@@ -1,0 +1,152 @@
+<html>
+	<head>
+		<title>BabyCare</title>
+		<style>
+		
+		#title{
+			background: url("http://www.gifmania.co.uk/People-Animated-Gifs/Animated-Babies/Babies-Boys/Baby-Boy-With-Pacifier-89949.gif");
+			
+			background-repeat: no-repeat;
+			background-size: 150px 150px;
+			background-color: lightblue;
+			padding-top: 1cm;
+			background-position: 15% 0%;
+			padding-bottom: 1cm;
+			font-size: 400%;
+			text-align: center;
+			color: red;
+		}
+		.columns{
+			-webkit-column-count: 2; 
+			-moz-column-count: 2;
+			column-count: 2;
+			column-gap:0cm;
+		}
+		
+		.block{
+			padding-top: 0.5cm;
+			padding-left: 2cm;
+			padding-bottom: 0.5cm;
+			background-color: pink;
+		}
+		.block2{
+			background-color: orange;
+		}
+		.block3{
+			background-color: yellow;
+		}
+		.block4{
+			background-color: lightgreen;
+		}
+		.buttonblock{
+			
+			text-align: center;
+			background-color: white;
+					
+		}
+		
+		.data{
+			font-weight: bold;
+			padding-right: 4cm;
+			font-size: 200%;
+		}
+		.data2{
+			padding-right: 3.7cm;
+		}
+		.data3{
+			padding-right: 4.45cm;
+		}
+		.data4{
+			padding-right: 1.6cm;
+			
+		}
+		.data5{
+			font-family:"Times New Roman";
+			font-size: 200%;
+			width: 669px;
+			height: 75px;
+			padding: 0;
+			display: inline-block;
+			text-align: center;
+			background-color:lightblue;
+			
+		}
+		.data6{
+			background-color:orchid;
+		}
+		
+		.rectangle {
+			
+			width: 200px;
+			height: 40px;
+			background: red;
+			display:inline-block;
+			text-align: center;
+			font-weight: bold;
+			font-size: 200%;
+		}
+		.rectangle1{
+			background: limegreen;
+		}
+		.image{
+			margin: auto;
+			width: 30%;
+			padding: 10px;
+		}
+				
+		</style>
+	</head>
+	<body>
+	<h1 id="title"> Baby Care </h1>
+	<div class="columns">
+		<div class=" block">
+		{% if Awake  %}
+			<span class = "data">Baby Awake</span><div class="rectangle rectangle1">Yes</div>
+		{%else%}
+			<span class = "data">Baby Awake</span><div class="rectangle">No</div>
+		{%endif%}
+		</div>
+		<div class="block block2">
+		{% if Moving %}
+			<span class = "data data2">Baby Moving</span><div class="rectangle rectangle1">Yes</div>
+		{%else%}
+			<span class = "data data2">Baby Moving</span><div class="rectangle">No</div>
+		{%endif%}
+			
+		</div>
+		<div class="block block3">
+			<span class = "data data3">Baby Mood</span><div class="rectangle" >{{Mood}}</div>
+		</div>
+		<div class="block block4">
+			{% if CareTaker is Yes%}
+			<span class = "data data4">CareTaker Around</span><div class="rectangle rectangle1">Yes</div>
+		{%else%}
+			<span class = "data data4">CareTaker Around</span><div class="rectangle">No</div>
+		{%endif%}
+			
+		</div>
+	</div>
+	<div class="columns columns1">
+		<div class="buttonblock">
+			<button class = "data data5" type="button" onclick="Snapshot()">Baby Snapshot</button>
+		</div>
+		<div class="buttonblock">
+			<button class = "data data5 data6" type="button" onclick="CareTakerStat()">CareTaker Stat</button>
+		</div>
+	
+	</div>
+	<div class="image">
+		<img src={{imageUrl}} height='420' width='420'  >
+			
+	</div>
+	<script>
+	function Snapshot() {
+		
+	}
+	function CareTakerStat() {
+		
+	}
+	</script>
+	
+	</body>
+</html>
